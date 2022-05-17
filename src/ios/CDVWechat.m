@@ -379,9 +379,12 @@ static int const MAX_THUMBNAIL_SIZE = 320;
 
 - (void)handleOpenURL:(NSNotification *)notification
 {
-    NSURL* url = [notification object];
-
-    if ([url isKindOfClass:[NSURL class]] && [url.scheme isEqualToString:self.wechatAppId])
+    NSMutableDictionary *dic = [notification object];
+    NSURL* url = [dic valueForKey:@"url"];
+    NSString* appId = [[self.commandDelegate settings] objectForKey:@"wechatappid"];
+    NSString* universalLink = [[self.commandDelegate settings] objectForKey:@"universallink"];
+    
+    if([url.absoluteString rangeOfString:[NSString stringWithFormat:@"%@/%@",universalLink,appId]].location != NSNotFound)
     {
         [WXApi handleOpenURL:url delegate:self];
     }
