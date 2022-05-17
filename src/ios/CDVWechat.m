@@ -24,6 +24,8 @@ static int const MAX_THUMBNAIL_SIZE = 320;
         
         NSLog(@"cordova-plugin-wechat has been initialized. Wechat SDK Version: %@. APP_ID: %@.", [WXApi getApiVersion], appId);
     }
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOpenURL:) name:@"CapacitorOpenUniversalLinkNotification" object:nil];
 }
 
 - (void)isWXAppInstalled:(CDVInvokedUrlCommand *)command
