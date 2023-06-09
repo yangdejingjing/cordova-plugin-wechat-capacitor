@@ -133,6 +133,9 @@
                     <data android:scheme="$WECHATAPPID"/>
                 </intent-filter>
             </activity>
+            <queries>
+                <package android:name="com.tencent.mm" />
+            </queries>
         </config-file>
 
         <source-file src="src/android/Wechat.java" target-dir="src/xu/li/cordova/wechat" />
