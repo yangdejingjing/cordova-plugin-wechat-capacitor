@@ -1,6 +1,6 @@
 {
-  "name": "cordova-plugin-wechat",
-  "version": "3.0.0",
+  "name": "cordova-plugin-wechat-capacitor",
+  "version": "3.0.3",
   "description": "A cordova plugin, a JS version of Wechat SDK",
   "cordova": {
     "id": "cordova-plugin-wechat",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xu-li/cordova-plugin-wechat.git"
+    "url": "git+https://github.com/yangdejingjing/cordova-plugin-wechat-capacitor"
   },
   "keywords": [
     "cordova",

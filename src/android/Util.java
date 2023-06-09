@@ -43,19 +43,7 @@ public class Util {
     }
 
     public static File getCacheFolder(Context context) {
-        File cacheDir = null;
-        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            cacheDir = new File(Environment.getExternalStorageDirectory(), "cache");
-            if (!cacheDir.isDirectory()) {
-                cacheDir.mkdirs();
-            }
-        }
-
-        if(!cacheDir.isDirectory()) {
-            cacheDir = context.getCacheDir(); //get system cache folder
-        }
-
-        return cacheDir;
+        return context.getCacheDir();
     }
 
     public static File downloadAndCacheFile(Context context, String url) {

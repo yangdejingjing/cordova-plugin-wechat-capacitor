@@ -1,5 +1,9 @@
 # Change Log
 
+## 3.0.1 - 2022-05-17
+### Fixed
+- Support Ionic6 IOS
+
 ## 3.0.0 - 2020-02-20
 ### Added
 - IOS Opensdk 1.8.6.2
